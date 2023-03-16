@@ -14,7 +14,7 @@
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Heo-Jeong-Eun"><b>Heo Jeong Eun</b></td>
-    <td align="center"><a href="JunSeokCheon"><b>Cheon Jun Seok</b></td>
+    <td align="center"><a href="https://github.com/JunSeokCheon"><b>Cheon Jun Seok</b></td>
   </tr>
 </table>
 

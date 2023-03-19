@@ -35,10 +35,10 @@
 >  - 매주 주말 온/오프라인 스터디를 통해 일정 조율 및 학습 내용 복습과 질의응답 시간을 갖고 Kaggle 예제 풀이를 합니다. 
 >
 >|          주차          |      학습 범위     |                                    스터디(온/오프라인)                                    |      과제     |
->| --------------------- | ---------------- | -------------------------------------------------------------------------- |---------------- |
+>| --------------------- | ---------------- | -------------------------------------------------------------------------- |----------------------- |
 >| week1 (~ 2023-03-12) | chapter 1. 파이썬 기반의 머신러닝과 생태계 이해 <br> chapter 2. 사이킷런으로 시작하는 머신러닝 | 일정 조율 및 chapter 1, chapter 2 복습 | <a href = https://www.kaggle.com/competitions/titanic>Kaggle titanic 제출</a> |
->| week2 (~ 2023-03-19) | chapter 3. 평가 | chapter 3 복습, Kaggle titanic 풀이 | |
->| week3 (~ 2023-03-26) | chapter4. 분류 - 06. XGBoost(eXtra Gradient Boost) | chapter 4 복습 | |
+>| week2 (~ 2023-03-19) | chapter 3. 평가 | chapter 3 복습, Kaggle titanic 풀이,  Kaggle titanic 제출| <a href = https://www.kaggle.com/competitions/titanic>Kaggle Leaderboard Position 올리기</a> |
+>| week3 (~ 2023-03-26) | chapter4. 분류 - 04. 랜덤 포레스트 | chapter 4 복습 | |
   
 <br>
 

@@ -39,7 +39,8 @@
 >| week1 (~ 2023-03-12) | chapter 1. 파이썬 기반의 머신러닝과 생태계 이해 <br> chapter 2. 사이킷런으로 시작하는 머신러닝 | 일정 조율 및 chapter 1, chapter 2 복습 | <a href = https://www.kaggle.com/competitions/titanic>Kaggle titanic 제출</a> |
 >| week2 (~ 2023-03-19) | chapter 3. 평가 | chapter 3 복습, Kaggle titanic 풀이,  Kaggle titanic 제출| <a href = https://www.kaggle.com/competitions/titanic>Kaggle Leaderboard Position 올리기</a> |
 >| week3 (~ 2023-03-26) | chapter 4. 분류 - 04. 랜덤 포레스트 | chapter 4 복습 | - |
->| week4 (~ 2023-04-02) | chapter 4. 분류 - 08. 베이지안 최적화 기반의 HyperOpt를 이용한 하이퍼 파라미터 튜닝 | chapter 4 복습 | |
+>| week4 (~ 2023-04-02) | chapter 4. 분류 - 08. 베이지안 최적화 기반의 HyperOpt를 이용한 하이퍼 파라미터 튜닝 | chapter 4 복습, Decision Tree Error Fix | <a href =https://dacon.io/edu/1004>Dacon 와인 품질 분류 프로젝트</a> |
+>| week4 (~ 2023-04-09) |chapter 4. - 12. 정리 |||
   
 <br>
 

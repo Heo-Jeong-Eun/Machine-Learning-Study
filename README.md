@@ -19,7 +19,7 @@
 </table>
 
 <br>
-6
+
 ## 🚀 goal
 >  - Learn ML and DL
 >  - Preparing for a Technical Interview

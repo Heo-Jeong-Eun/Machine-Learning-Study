@@ -44,7 +44,8 @@
 >|week5 (~ 2023-04-16)|chapter 4. - 12. 정리| chapter 4 복습, Dacon 와인 품질 분류 제출 코드 분석(준석) | <a href = https://dacon.io/competitions/open/235610/overview/description>와인 품질 분류 경진대회</a> |
 >|week6 (~ 2023-04-23)|chapter 5. - 5. 다항 회귀와 과적합 / 과소적합 이해 | - | <a href = https://dacon.io/competitions/open/235610/overview/description>와인 품질 분류 경진대회</a> |
 >|week7 (~ 2023-04-30)|chapter 5. - 8. 회귀 트리 | - | - | 
->|week8 (~ 2023-06-04)|chapter 5. - 11. 정리 | - | - |
+>|week8 (~ 2023-06-04)|chapter 5. - 11. 정리 | chapter 5 복습 | - |
+>|week9 (~ 2023-06-11)|chapter 6. - 11. 정리 | - | - |
   
 <br>
 

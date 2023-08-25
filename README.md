@@ -10,11 +10,13 @@
   <tr>
     <td align="center"><a href="https://github.com/Heo-Jeong-Eun"><img src="https://avatars.githubusercontent.com/Heo-Jeong-Eun" width="150px;" alt="">
     <td align="center"><a href="https://github.com/JunSeokCheon"><img src="https://avatars.githubusercontent.com/JunSeokCheon" width="150px;" alt="">
+    <td align="center"><a href="https://github.com/enddl3224"><img src="https://avatars.githubusercontent.com/enddl3224" width="150px;" alt="">
     </td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Heo-Jeong-Eun"><b>Heo Jeong Eun</b></td>
     <td align="center"><a href="https://github.com/JunSeokCheon"><b>Cheon Jun Seok</b></td>
+    <td align="center"><a href="https://github.com/enddl3224"><b>Kim Min Ji</b></td>
   </tr>
 </table>
 
@@ -46,6 +48,7 @@
 >|week7 (~ 2023-04-30)|chapter 5. - 8. 회귀 트리 | - | - | 
 >|week8 (~ 2023-06-04)|chapter 5. - 11. 정리 | chapter 5 복습 | - |
 >|week9 (~ 2023-06-11)|chapter 6. - 11. 정리 | - | - |
+>|week10 (~ 2023-09-02)|chapter 6. - 11. 정리 | - | chapter 1-6 복습 |
   
 <br>
 

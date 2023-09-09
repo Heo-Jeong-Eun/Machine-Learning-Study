@@ -50,6 +50,7 @@
 >|week9 (~ 2023-06-11)|chapter 6. - 11. 정리 | - | - |
 >|week10 (~ 2023-09-02)|chapter 6. - 11. 정리 | - | chapter 1-6 복습 |
 >|week11 (~ 2023-09-09)|chapter 7. - 02. 군집 평가 | chapter 1-6 복습 | chapter 1-6 복습, <br> <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a>
+>|week12 (~ 2023-09-16)|chapter 7. - 04. GMM | chapter 1-6 복습 | chapter 1-6 복습, <br> <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>
   
 <br>
 

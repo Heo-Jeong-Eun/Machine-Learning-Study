@@ -17,8 +17,8 @@ Author **Heo-Jeong-Eun**
 
 - Object Detection은 Segmentation, Pose Estimation, Tracking, Action Recognition과 같은 수많은 Vision 작업을 지원한다.
 - 현재의 Object Detector는 Object를 감싸는 축 정렬 BBox를 통해 Objcet를 나타낸다. 그리고 Object Detection을 광범위한 수의 잠재적인 BBox의 이미지 분류로 축소한다. 각 BBox는 이미지가 특정 물체인지, 배경인지 결정한다.
-    1. 1단계 Detector는 Anchors라고 하는 가능한 BBox의 복잡한 배열을 이미지 위로 밀어넣고 BBox 구성 요소를 지정하지 않고 직접 분류한다. 
-    2. 2단계 Detector는 잠재적 Box에 대한 이미지 특징을 다시 계산한 다음 특징을 분류한다. 후처리, 즉 최대값을 억제를 수행한 후 BBox IoU를 결합하여 동일한 Instance에 대해 중복된 Detection를 다시 이동시킨다. 이러한 후처리는 구별하고 Training하기 어렵기 때문에 대부분의 Detector는 End-to-End Training이 불가능하다. 
+    - 1단계 Detector는 Anchors라고 하는 가능한 BBox의 복잡한 배열을 이미지 위로 밀어넣고 BBox 구성 요소를 지정하지 않고 직접 분류한다. 
+    - 2단계 Detector는 잠재적 Box에 대한 이미지 특징을 다시 계산한 다음 특징을 분류한다. 후처리, 즉 최대값을 억제를 수행한 후 BBox IoU를 결합하여 동일한 Instance에 대해 중복된 Detection를 다시 이동시킨다. 이러한 후처리는 구별하고 Training하기 어렵기 때문에 대부분의 Detector는 End-to-End Training이 불가능하다. 
 - 이 논문에서는 훨씬 더 간단하고 효율적인 방법을 제안한다.
 - **BBox 중앙에 있는 단일 점으로 Object를 표현하고 Size, 3D Location, Orientation, Pose와 같은 Object Prop은 중심 위치의 이미지 특징에서 직접 Regresses한다.**
 - Object Detection은 Key Point Estimation 문제인데, 입력 이미지를 Fully Convolutional Network에 공급하면 Heatmap이 생성된다. 이 **Heatmap의 Peaks는 Object의 중심점**에 해당한다. **각 Peaks 이미지 특징은 상자 높이와 무게를 포함하는 물체를 예측**한다.

@@ -67,29 +67,81 @@ Author **Heo-Jeong-Eun**
 
 ## Preliminary
 
+- 이미지를 I ∈ R^(W * H * 3)이라 하고, 모델의 목표는 Key Point Heatmap을 추론하는 것이기 때문에 이 Heatmap을 Y ∈ [0, 1]^(W / R * H / R * C)라고 한다.
+    - 여기서 R은 Ouput Stride이며, C는 Key Point Type Number라고 보면 된다.
+- Key Point Type은 Human Pose Estimation에서는 17개(17개의 Joint)이고, Object Detection에서는 Category 개수인 80개가 된다.
+- Default Output Stride로 R = 4를 사용하게 되며, 이를 통해 이미지가 Downsample 된다.
+- Y x, y, z는 올바르게 Key Point가 예측된다면 1 값을 가진다. 0인 것은 Background라고 보면 된다.
+- 이 논문에서 Model은 **Fully Convolutional Encoder-Decoder Network는 Stacked Hourglass Network, Up-Convolutional Residual Network(ResNet), Deep Layer Aggregation(DLA)를 사용**한다.
+- **Key Point Prediction Network는 ConnerNet 방법을 따른다.**
+    - 각 Class에 대한 GT Key Point가 있으면, Low-Resolution Equivalent p ∈ R^2 값을 계산한다.
+    - 그 다음 Gaussian Kernel을 이용하여 Heatmap을 생성하여 같은 Class의 Two Gaussian이 겹쳐지면 Element-Wise Maximum을 계산한다.
+    - Loss 함수는 아래 공식과 같이 **Focal Loss**를 사용한다.
+        
+        <img src = 'image/Lk.png'>
+        
+    - 여기서 α와 β는 Focal Loss의 Hyper-Parameter이다.
+    - N은 이미지에서의 Key Point 갯수이고, 이는 GT 위치에 대해 Positive Focal Loss Instance 1을 갖게 된다.
+        - 이 논문에서는 α = 2, β = 4를 사용하였다고 한다.
+    - Discretization Error를 개선하기 위해 각 중심점으로부터 Local Offset O ∈ R ^ (W / R * H / R * 2)를 추가로 계산한다.
+    - 모든 Class는 동일한 Offset Prediction을 공유하게 되며 Offset은 다음과 같이 **L1 Loss**로 학습된다.
+        
+        <img src = 'image/Loff.png'>
+        
+    - Key Point Location에 대해서만 학습되고, 나머지 Location은 무시된다.
+
 ---
 
 ## Object as Points
 
+<img src = 'image/Outputs of our Network for Different Tasks.png'>
+
+- **L1 Loss을 중심점에 적용시킨다. Scale 값을 Normalize 하지 않고 직접적으로 Raw Pixel에 대해 Coordinates를 구한다.**
+- 따라서 λ {size}를 통해 직접적으로 Loss를 조절한다. 전체 손실 함수는 아래 공식과 같다.
+    
+    <img src = 'image/Lsize, Ldet.png'>
+    
+- Network는 C + 4 Output 각각 Location에 대해 예측한다.
+- **From Points to BBox**
+    - Inference 시간에 독립적으로 각 Category의 Heatmap에서 Peaks를 추출한다.
+    - Key Point Value인 Y {x, y, c}를 통해 Detection Confidence를 측정하고 BBox의 Location을 생산한다.
+    - Peak Key Point 추출은 효율적인 NMS 대안으로 작동한다. 또한 3 X 3 Max Pooling 연산을 통해 Device에서 효율적으로 실행될 수 있다.
+
 ### 3D Detection
 
+- 3D Detection 3개의 차원으로 BBox를 평가한다. 그리고 3개의 속성이 필요한데 이는 Center Point와 Depth로 별도의 Head를 구성하여 진행한다.
+- Depth는 Center Point Single Scalar 값이다. 하지만 Depth는 직접적으로 Regression 되기 힘들다. 따라서 Output에 대해 Transformation을 적용한다.
+- 이전과 다르게 Output Layer에서 Inverse Sigmoidal Transformation을 사용한다. 이후 Origin Depth Domain에 L1 Loss를 적용하여 Depth를 추정한다.
+
 ### Human Pose Estimation
+
+- Human Pose Estimation은 이미지에서 Human Instance에 대해 k 2D Human Joint Location을 찾는 것을 목표로 한다.
+    - Center Point에 대해 Pose가 k * 2 - Dimensional Property를 갖는다.
+- Joint Offset에 대해 L1 Loss를 사용하여 직접적으로 Regression 한다. 그리고 Human Joint Heatmap은 Focal Loss를 사용하여 Training 한다.
 
 ---
 
 ## Implementation Detatils
 
+- 4개의 Architecture로 실험을 했다. ResNet과 Deformable Convolution Layers를 사용한 DLA-34를 모두 Modify 했고, Howrglass Network를 있는 그대로 사용했다.
+
+    <img src = 'image/Different Networks on COCO.png'>
+
 ---
 
 ## Experiments
-
----
 
 ### Object Detection
 
 ### 3D Detection
 
 ### Pose Estimation
+
+<img src = 'image/State of the Art Comparison on COCO Test Dev.png'>
+<img src = 'image/Ablation of Design Choicese on COCO.png'>
+<img src = 'image/KITTI Evalution.png'>
+<img src = 'image/Qualitative Results.png'>
+<img src = 'image/Key Point Detection on COCO Test Dev.png'>
 
 ---
 

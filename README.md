@@ -53,7 +53,8 @@
 >|week12 (~ 2023-09-16)|chapter 7. - 04. GMM | - | chapter 1-6 복습, <br> <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>
 >|week13 (~ 2023-09-24)|chapter 7. - 07. 정리 | chapter 7 복습 | chapter 1-6 복습, <br> <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>
 >|week14 (~ 2023-10-7)| Objects as Points 논문 분석,  <br> <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 작성 및 분석 | Objects as Points, CenterNet Baseline Code Review | <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 제출 |
->|week15 (~ 2023-10-14)| chapter 8. - 04. 텍스트 분류 실습 - 20 뉴스그룹 분류 | - | - |
+>|week15 (~ 2023-10-14)| chapter 8. - 04. 텍스트 분류 실습 - 20 뉴스그룹 분류 | - | 모의 면접 준비 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> |
+>|week15 (~ 2023-10-21)| chapter 8. - 07. 문서 유사도 | 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> | - |
 
 <br>
 

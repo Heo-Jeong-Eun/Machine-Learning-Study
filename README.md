@@ -56,6 +56,7 @@
 >|week15 (~ 2023-10-14)| chapter 8. - 04. 텍스트 분류 실습 - 20 뉴스그룹 분류 | - | 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> |
 >|week15 (~ 2023-10-21)| chapter 8. - 07. 문서 군집화 소개와 실습 | - | - |
 >|week16 (~ 2023-10-29)| chapter 8. - 11. 정리 | chapter 8 복습, <br> 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> | - |
+>|week16 (~ 2023-11-05)| chapter 8. - 11. 정리 | chapter 8 복습, <br> 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> | - |
 
 <br>
 

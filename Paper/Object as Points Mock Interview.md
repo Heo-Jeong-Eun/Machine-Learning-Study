@@ -11,26 +11,6 @@ CenterNet이란 Anchor Box를 사용하는 기존의 **One-Stage Detector**와 �
 
 또한 CenterNet은 더 큰 Output Resolution(Output Stride of 4)을 가진다. 
 
-### Output Stride란 ?
-
-Output Stride는 **CNN 구조에서 입력 이미지와 Output Feature Map 사이의 크기 비율을 나타내는 개념**이다. 
-보통 CNN은 여러 층의 Convolution Layer와 Polling Layer로 구성되어 있다. 
-입력 이미지가 이 네트워크를 통과하면서 크기가 줄어드는데, 이때 Output Stride는 입력 이미지의 크기와 Output Feature Map 크기 간의 비율을 의미한다. 
-
-작은 Output Stride 값은 공간 해상도를 높이지만 더 많은 계산을 필요로 하며, 큰 Output Stride 값은 계산을 줄이지만 공간 해상도를 낮출 수 있다. 
-
-**Output Resolution**은 **Object를 감지하기 위한 최종 Map**의 크기로, Output Stride of 4인 경우, **입력 이미지가 네트워크를 통과한 후 Output Feature Map의 크기가 입력 이미지의 크기보다 4배 작아진다는 것을 의미**한다.
-
-즉, 네트워크는 입력 이미지를 처리하여 최종 Output Feature Map을 생성하며 이 Map은 입력 이미지보다 4배 작은 공간 해상도를 갖게 된다. 이를 통해 네트워크는 Object의 중심점을 예측하고 해당 Center를 기반으로 BBox를 생성할 수 있다. 
-
-### Output Feature Map이란 ?
-
-**CNN의 중간 단계에서 얻어지는 3차원 배열**이다. 이는 입력 이미지를 Convolution Layer와 Pooling Layer를 통과시켜 얻어지는 중간 결과물로서 각 Channel은 특정한 특징을 나타낸다. 
-
-1. **Spatial Dimension** (공간 차원) : Output Feature Map은 공간적인 정보를 포함한다. 이는 가로, 세로 차원으로 표현된다. 
-2. **Channel** (채널) : Output Feature Map은 여러 개의 Channel로 이루어져있다. 각 Channel은 특정한 시각적, 의미적인 특징을 갖는다. 
-3. **Depth** (깊이) : Output Feature Map의 Depth는 해당 Layer에서 사용된 Filter의 갯수에 의해 결정된다. 각 Filter는 입력 데이터의 특징을 감지하고 나타낸다. 
-
 ### One-Stage Detector와 Two-Stage Detector
 
 **One-Stage Detector**
@@ -73,6 +53,26 @@ Two-Stage Detector는 더 복잡한 모델 구조로 정확도가 중요한 경�
 
 복잡한 Object 상황을 다루어야하는 경우 Two-Stage Detector가 더 유리하다. 
 
+### Output Stride란 ?
+
+Output Stride는 **CNN 구조에서 입력 이미지와 Output Feature Map 사이의 크기 비율을 나타내는 개념**이다. 
+보통 CNN은 여러 층의 Convolution Layer와 Polling Layer로 구성되어 있다. 
+입력 이미지가 이 네트워크를 통과하면서 크기가 줄어드는데, 이때 Output Stride는 입력 이미지의 크기와 Output Feature Map 크기 간의 비율을 의미한다. 
+
+작은 Output Stride 값은 공간 해상도를 높이지만 더 많은 계산을 필요로 하며, 큰 Output Stride 값은 계산을 줄이지만 공간 해상도를 낮출 수 있다. 
+
+**Output Resolution**은 **Object를 감지하기 위한 최종 Map**의 크기로, Output Stride of 4인 경우, **입력 이미지가 네트워크를 통과한 후 Output Feature Map의 크기가 입력 이미지의 크기보다 4배 작아진다는 것을 의미**한다.
+
+즉, 네트워크는 입력 이미지를 처리하여 최종 Output Feature Map을 생성하며 이 Map은 입력 이미지보다 4배 작은 공간 해상도를 갖게 된다. 이를 통해 네트워크는 Object의 중심점을 예측하고 해당 Center를 기반으로 BBox를 생성할 수 있다. 
+
+### Output Feature Map이란 ?
+
+**CNN의 중간 단계에서 얻어지는 3차원 배열**이다. 이는 입력 이미지를 Convolution Layer와 Pooling Layer를 통과시켜 얻어지는 중간 결과물로서 각 Channel은 특정한 특징을 나타낸다. 
+
+1. **Spatial Dimension** (공간 차원) : Output Feature Map은 공간적인 정보를 포함한다. 이는 가로, 세로 차원으로 표현된다. 
+2. **Channel** (채널) : Output Feature Map은 여러 개의 Channel로 이루어져있다. 각 Channel은 특정한 시각적, 의미적인 특징을 갖는다. 
+3. **Depth** (깊이) : Output Feature Map의 Depth는 해당 Layer에서 사용된 Filter의 갯수에 의해 결정된다. 각 Filter는 입력 데이터의 특징을 감지하고 나타낸다. 
+
 ### Key Point Estimation이란 ?
 
 **CenterNet은 Key Point Estimation을 활용해 Obejct의 중심점을 찾는다. Key Point Estimation 방식을 사용하면 Object의 중심을 정확하게 찾을 수 있기 때문에 작은 Object와 겹친 Object에서 좋은 성능을 보인다.** 
@@ -92,15 +92,10 @@ Two-Stage Detector는 더 복잡한 모델 구조로 정확도가 중요한 경�
 3. 손실 함수 : 예측된 Key Point와 실제 Key Point 사이의 오차를 계산하는 손실 함수를 정의한다. 
 4. 훈련 : 데이터셋을 사용해 모델 훈련을 시킨다. 이 과정에서 모델은 이미지를 입력으로 받아 Key Point를 예측하고, 손실 함수를 최소화하도록 업데이트된다. 
 
-### BBox 형태의 Detection이 아닌 Key Point Detection을 사용하는 것이 성능이 좋은 이유는 ?
+### Key Point Heatmap이란 ?
 
-비효율적인 Post-Processing 과정이 필요 없기 때문이다. 
-
-### Post-Processing이란 ?
-
-**초기 모델 출력을 개선하거나 추가적인 정보를 얻기 위해 모델의 출력에 대해 추가적인 단계나 변환을 적용하는 과정**을 의미한다. 
-
-Object Detection에서 Post-Processing : 모델의 출력은 종종 BBox의 좌표, Class의 확률 등을 포함하는데 이 정보를 기반으로 최종적인 BBox를 생성하거나 불필요한 Box를 제거하는 과정이 있다. 
+CenterNet에서 네트워크를 통해 입력으로 받은 **이미지를 연산하게 되면 Feature가 최종 출력**된다. **Feature에서는 서로 다른 Key Point들에 대해 Heatmap**을 가지게 된다. 이 **Heatmap의 최고점(Peak)가 Object의 중심점으로 예측되는 구조**를 가진다. 또한 각 중심점이 어떤 Class인지 찾는데에도 Heatmap이 사용된다. 
+따라서 모델은 Key Point Heatmap을 추론하는 것을 목표로 갖는다. 
 
 ### CenterNet 구조
 
@@ -118,6 +113,81 @@ ncls = number of class / ncls x 64 x 123은 출력 tensor의 모양이다.
 
 **Width & Height** Tensor는 Object의 Width, Height를 추정하는 Tensor이다. 
 예를 들어 Object ID = 0인 물체의 Width, Height = WidthAndHeight[0 : 2, x, y] 위치 값이고 Object ID = 4인 물체의 Width, Height = WidthAndHeight[8 : 10, x, y]에 저장된다.  
+
+<img src = 'image/CenterNet Architecture.png'>
+
+CenterNet Architecture
+
+CenterNet의 Architecture를 단순화 시켜보면 위 그림과 같다. **출력 부분을 보면 3개의 모듈로 나누어지는 것**을 알 수 있다. 
+
+각 모듈은 **1. Heatmap Head, 2. Dimension Head, 3. Offset Head**가 있다. 
+
+**모든 Head는 같은 크기의 H, W(H / R, W / R)를 갖는다.** R = 4로 Head는 (512 / 4 = 128, 512 / 4 = 128)의 크기를 갖는다. 
+
+**반면 C는 서로 다른 값을 가진다.** Heatmap Head는 80개의 Channel, Offset Head는 2개의 Channel, Dimension Head는 2개의 Channel을 가진다. 
+이때 Heatmap의 Channel 수는 Class 수에 해당한다. (COCO 기준)
+
+### Heatmap Head란 ?
+
+**Heatmap Head는 주어진 입력 이미지의 Key Point들을 추정하는데 사용**된다. 
+
+Heatmap Head의 목적은 Heatmap 예측이며, 이 값은 (W / R, H / R, C)의 Dimension을 가진다. 이때 Output Stride는 R, Class의 수는 C를 가진다. 
+
+Heatmap은 x, y, z의 Function 형태로 나타낼 수 있다. 
+**만약 Heatmap(x, y, z) = 1이라면 어떤 Class C의 중심점을 감지한 것으로 나타낼 수 있다. 반면 Heatmap(x, y, z) = 0이라면 배경이라고 할 수 있다.** 
+
+<img src = 'image/Heatmap Head.png'>
+
+Ground Truth Pre-processing
+
+<img src = 'image/Heatmap Loss.png'>
+
+**Heatmap Head에서 Loss를 구하기 위해 Ground Truth에 대한 전처리가 필요**하며, 그 과정에 대한 Flow이다. 
+
+먼저 Stride를 거친 저해상도 영상을 바로 사용하지 않고, **2D Gaussian Kernel을 이용해 Blur를 적용**한다. 
+
+가장 왼쪽의 기존 해상도 영상에서 빨간색 점을 저해상도로 변환 후 바로 사용하면 GT에 해당하는 점, 단 하나만 1의 값을 가지고 주변은 0을 가지게 된다. 
+이 경우 Prediction한 결과와 Ground Truth에 해당하는 좌표가 상당히 가까이 옆에 있더라도 Prediction을 잘 했다고 Loss를 반영하기 어려워지게 된다. 
+
+**때문에 Gaussian Kernel을 이용해 Blur를 적용한 Ground Truth을 사용하면 Prediction에 대한 허용 오차가 생기게 되어 Loss 반영이 더 쉬워진다.** 
+
+위 Kernel 식에 사용된 **σ에는 Object의 크기에 Adaptive하게 표준편차가 적용된다.** 
+
+Heatmap Head에서 사용하는 Loss는 **Focal Loss**이다. 
+
+**Focal Loss는 예측한 좌표가 중심점이 맞다면, 예측한 좌표에 얼만큼 오차가 있는지 구한다. 반면 예측한 좌표가 중심점이 아니라면, 0인 영역에서 얼만큼 떨어져있는지를 통해 Loss를 구한다.** 
+
+Focal Loss를 사용하는 이유는 Detection이 쉬운 Object의 경우 Loss 값을 낮추고, Detection이 어려운 Object의 경우 Loss 값을 높여 잘 검출이 되지 않는 Object에 집중한 학습을 하기 위함이다. 
+
+### Offset Head란 ?
+
+**Offset Head는 입력의 Down-Sampling으로부터 발생한 오차를 정정하기 위해 사용**된다. 
+
+중심점을 예측한 후, 예측한 중심점을 **입력 이미지의 해상도에 맞추어 Mapping** 해야 한다. Down-Sampling 된 해상도에서의 중심점을 입력 이미지 해상도에 맞게 복원할 때, **정수값의 좌표로 복원**해야하므로 **floating point → integer 값으로 복원할 때 값을 정정해주기 위해 Offset Head를 사용**한다. 
+
+Offset Head의 Dimension은 (H / R, W / R, 2)를 가지며 Channel 방향으로 가지는 2개의 값은 x, y 방향으로의 좌표 Offset 값을 나타낸다. 
+
+<img src = 'image/Offset Head.png'>
+
+### Dimension(W-H) Head란 ?
+
+**Dimension Head는 BBox의 W와 H를 나타내기 위해 사용**된다 .
+
+예를 들어 C Class에 해당하는 K Object BBox의 좌표가 (x1, y1, x2, y2)라고 가정할 때 **Object의 크기는 (x^2 - x^1, y^2 - y^1)로 추정**할 수 있다. 
+
+**이 값을 구해 Dimension Head는 L1 Distance Norm을 Loss로 사용한다.** 
+
+이 Head의 Dimension은 (H / R, W / R, 2)의 크기를 가지고 Channel 방향으로 가지는 2개의 값은 중심점을 기준으로 W, H 크기에 해당하는 값을 가진다. 
+
+### BBox 형태의 Detection이 아닌 Key Point Detection을 사용하는 것이 성능이 좋은 이유는 ?
+
+비효율적인 Post-Processing 과정이 필요 없기 때문이다. 
+
+### Post-Processing이란 ?
+
+**초기 모델 출력을 개선하거나 추가적인 정보를 얻기 위해 모델의 출력에 대해 추가적인 단계나 변환을 적용하는 과정**을 의미한다. 
+
+Object Detection에서 Post-Processing : 모델의 출력은 종종 BBox의 좌표, Class의 확률 등을 포함하는데 이 정보를 기반으로 최종적인 BBox를 생성하거나 불필요한 Box를 제거하는 과정이 있다. 
 
 ### Offset이란 ?
 

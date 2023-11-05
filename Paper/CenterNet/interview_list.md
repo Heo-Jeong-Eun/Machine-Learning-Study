@@ -6,12 +6,19 @@ key point를 찾아 단일 지점으로 객체를 검출하는 모델입니다.
 Bbox를 추정하는 모델들보다 간단하며 빠른 성능을 보유하고 있습니다.    
     
 ### 2. NMS란 무엇인가요?
-![img](https://wikidocs.net/images/page/142645/NMS.png)    
+<img src="https://wikidocs.net/images/page/142645/NMS.png"
+    width="50%"
+    height="50%"/>
+<!-- ![img](https://wikidocs.net/images/page/142645/NMS.png) -->
 NMS(Non-Maximum Suppression)란 객체가 존재하는 위치 주변에 여러개의 Bbox가 생성되는데 그 중 score가 높은 1개의 bbox로 추출하는 알고리즘입니다.    
 기존의 객체검출에서 사용하는 NMS는 IoU(Intersection over Union)의 값을 정하여 배경과 객체로 검출하거나 bbox를 무시하게 됩니다.    
 예를 들어, IoU값이 0.7이상이라면 객체로 인식하고, IoU값이 0.3이하라면 배경으로 인식하거나 무시하게 됩니다.    
 #### IoU란
-![img](https://blog.kakaocdn.net/dn/1LCYM/btq93o4JkR4/IlOWv5Z5uKtlBSXBQJHTck/img.png)    
+<img
+    src="https://blog.kakaocdn.net/dn/1LCYM/btq93o4JkR4/IlOWv5Z5uKtlBSXBQJHTck/img.png"
+    width="50%"
+    height="70%"/>
+<!-- ![img](https://blog.kakaocdn.net/dn/1LCYM/btq93o4JkR4/IlOWv5Z5uKtlBSXBQJHTck/img.png) -->
 2개의 영역이 얼마나 겹쳐있는지를 확인하는 수치로 겹친영역/전체영역 으로 나타낸다.    
     
 ### 3. Key Point를 사용한 검출이 CenterNet이 최초는 아니지 않나?

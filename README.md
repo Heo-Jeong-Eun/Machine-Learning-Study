@@ -49,14 +49,15 @@
 >|week8 (~ 2023-06-04)|chapter 5. - 11. 정리 | chapter 5 복습 | - |
 >|week9 (~ 2023-06-11)|chapter 6. - 11. 정리 | chapter 6 복습  | - |
 >|week10 (~ 2023-09-02)|chapter 6. - 11. 정리 | chapter 1-6 복습 | - |
->|week11 (~ 2023-09-09)|chapter 7. - 02. 군집 평가 | - | <br> <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a>
->|week12 (~ 2023-09-16)|chapter 7. - 04. GMM | - | <br> <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>
->|week13 (~ 2023-09-24)|chapter 7. - 07. 정리 | chapter 7 복습 | <br> <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>
->|week14 (~ 2023-10-7)| Objects as Points 논문 분석,  <br> <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 작성 및 분석 | Review : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>, CenterNet Baseline Code | <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 제출 |
+>|week11 (~ 2023-09-09)|chapter 7. - 02. 군집 평가 | - | <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a>
+>|week12 (~ 2023-09-16)|chapter 7. - 04. GMM | - | <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>
+>|week13 (~ 2023-09-24)|chapter 7. - 07. 정리 | chapter 7 복습 | <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> |
+>|week14 (~ 2023-10-7)| Objects as Points 논문 분석 | Review : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a>, CenterNet Baseline Code | - |
 >|week15 (~ 2023-10-14)| chapter 8. - 04. 텍스트 분류 실습 - 20 뉴스그룹 분류 | - | 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> |
 >|week15 (~ 2023-10-21)| chapter 8. - 07. 문서 군집화 소개와 실습 | - | - |
 >|week16 (~ 2023-10-29)| chapter 8. - 11. 정리 | chapter 8 복습, <br> 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> | - |
->|week16 (~ 2023-11-05)| chapter 8. - 11. 정리 | chapter 8 복습, <br> 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> | - |
+>|week16 (~ 2023-11-05)| chapter 8. - 11. 정리 | chapter 8 복습, <br> 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> | <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 작성 및 분석 |
+>|week17 (~ 2023-11-12)| chapter 9. - 04. 잠재 요인 협업 필터링 | <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 분석 및 제출 | - |
 
 <br>
 

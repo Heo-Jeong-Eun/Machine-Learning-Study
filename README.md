@@ -1,4 +1,4 @@
-# AI-Tech
+# Machine-Learning Study
 
 > ### Machine-Learning Interview Study.
 > Machine-Learning 엔지니어 기술 면접 스터디

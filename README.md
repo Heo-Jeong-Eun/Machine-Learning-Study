@@ -1,7 +1,7 @@
 # Machine-Learning Study
 
-> ### Machine-Learning Interview Study.
-> Machine-Learning 엔지니어 기술 면접 스터디
+> ### Machine-Learning Technical Interview Study
+> Machine-Learning 기술 면접 스터디
 
 <br>
 

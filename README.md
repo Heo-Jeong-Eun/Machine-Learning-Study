@@ -59,7 +59,7 @@
 > |week16 (~ 2023-11-05)| chapter 8. - 11. 정리 | chapter 8 복습, <br> 모의 면접 : <a href = https://arxiv.org/pdf/1904.07850.pdf>Objects as Points</a> | <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 작성 및 분석 |
 > |week17 (~ 2023-11-11)| chapter 9. - 04. 잠재 요인 협업 필터링 | <a href = https://www.kaggle.com/competitions/pku-autonomous-driving/code>Kaggle Peking University/Baidu - Autonomous Driving</a> : CenterNet Baseline Code 분석 및 제출 | - |
 > |week18 (~ 2023-11-20)| chapter 9. - 07. 행렬 분해를 이용한 잠재 요인 협업 필터링 실습 | - | - |
-> |week19 (~ 2023-11-20)| chapter 9. - 09. 정리 | chapter 9 복습 | - |
+> |week19 (~ 2023-11-29)| chapter 9. - 09. 정리 | chapter 9 복습 | - |
 
 <br>
 
